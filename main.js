@@ -57,6 +57,17 @@ funksjonen)
 
 // Skriv koden for oppgave 1 her
 
+function whatIs(number) {
+    if (number % 2 === 0) {
+        return "Partall";
+    } else {
+        return "Oddetall";
+    }
+};
+
+console.log(whatIs(25));
+console.log(whatIs(93));
+
 /******************************************************************************
 2.
 
@@ -99,10 +110,23 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 // Skriv koden for oppgave 3 her
 
-function greeter = (name, time) => {
-    if (`${name}, good ${time}`);
-}
+ const greet = (name, time) => {
+    if (time === undefined) {
+        return "Ugyldig tid";
+    } else if (time < 0 || time > 23) {
+        return "ugylid tid";
+    } else if (time >= 0 && time <=5) {
+        return `God natt ${name}`;
+    } else if (time >= 6 && time <= 11) {
+        return `God morgen ${name}`;
+    } else if (time >= 12 && time <=17) {
+        return `God dag ${name}`;
+    } else {
+        return `God kveld ${name}`;
+    }
+ };
 
+ console.log(greet("Phil", 13));
 /******************************************************************************
 4.
 
@@ -119,7 +143,10 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
+const animals = ["Parrot", "dog", "Horse", "Elephant"];
 
+console.log(animals);
+console.log(animals.slice(1,3)); // Removes first and last animal. Slice removes parrot due to being asked not to include index 0, and removed elephant due to stopping before index 3
 /******************************************************************************
 5.
 
@@ -140,6 +167,10 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
+const myText = "      Why is this difficult      ";
+console.log(myText);
+console.log(myText.replace("difficult", "fun")); // replaces the word with a new word
+console.log(myText.trim()); //Removes white space
 
 /******************************************************************************
 6.
@@ -165,7 +196,9 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 // Skriv koden for oppgave 6 her
-
+console.log(items.slice(1, 6));
+console.log(items.splice(3, 3, "Linjal"));
+console.log(items.splice(1, 2, "Markeringpenn"));
 /******************************************************************************
 7.
 
