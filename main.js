@@ -10,14 +10,14 @@ Legg til kommentarer i koden din som kort forklarer hva den gjør.
 ******************************************************************************/
 // Function
 function doAction() {
-    console.log("Read book")
+  console.log("Read book");
 }
 
 doAction(); // The action writes "Read Book" into the console
 
 // Fucntion with parameters
 function call(name) {
-    console.log(`${name}!`)
+  console.log(`${name}!`);
 }
 
 //calls the names into the console log
@@ -26,14 +26,14 @@ call("Vaelthorin");
 
 // Arrow function
 const play = () => {
-    console.log("Throws ball")
-}
+  console.log("Throws ball");
+};
 
-play(); // Calls "Throws ball" into the console 
+play(); // Calls "Throws ball" into the console
 
 // Decleration of a value
-function addTogether (a, b) {
-    return a + b;
+function addTogether(a, b) {
+  return a + b;
 }
 
 let result = addTogether(209, 86); // Fucntion returns the value
@@ -42,7 +42,7 @@ console.log(result); // Calls the value into the console
 // Written in one line
 const ageGuessed = (a, b) => a + b;
 
-console.log(ageGuessed(123,75)); // Writes the value in the console
+console.log(ageGuessed(123, 75)); // Writes the value in the console
 /******************************************************************************
 1.
 
@@ -58,12 +58,12 @@ funksjonen)
 // Skriv koden for oppgave 1 her
 
 function whatIs(number) {
-    if (number % 2 === 0) {
-        return "Partall";
-    } else {
-        return "Oddetall";
-    }
-};
+  if (number % 2 === 0) {
+    return "Partall";
+  } else {
+    return "Oddetall";
+  }
+}
 
 console.log(whatIs(25));
 console.log(whatIs(93));
@@ -81,10 +81,9 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
-const text = "Xaden!"
+const text = "Xaden!";
 
 console.log(text.toUpperCase()); // Logs the string in the console in upper case
-
 
 /******************************************************************************
 3.
@@ -110,23 +109,23 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 
 // Skriv koden for oppgave 3 her
 
- const greet = (name, time) => {
-    if (time === undefined) {
-        return "Ugyldig tid";
-    } else if (time < 0 || time > 23) {
-        return "ugylid tid";
-    } else if (time >= 0 && time <=5) {
-        return `God natt ${name}`;
-    } else if (time >= 6 && time <= 11) {
-        return `God morgen ${name}`;
-    } else if (time >= 12 && time <=17) {
-        return `God dag ${name}`;
-    } else {
-        return `God kveld ${name}`;
-    }
- };
+const greet = (name, time) => {
+  if (time === undefined) {
+    return "Ugyldig tid";
+  } else if (time < 0 || time > 23) {
+    return "ugylid tid";
+  } else if (time >= 0 && time <= 5) {
+    return `God natt ${name}`;
+  } else if (time >= 6 && time <= 11) {
+    return `God morgen ${name}`;
+  } else if (time >= 12 && time <= 17) {
+    return `God dag ${name}`;
+  } else {
+    return `God kveld ${name}`;
+  }
+};
 
- console.log(greet("Phil", 13));
+console.log(greet("Phil", 13));
 /******************************************************************************
 4.
 
@@ -146,7 +145,7 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 const animals = ["Parrot", "dog", "Horse", "Elephant"];
 
 console.log(animals);
-console.log(animals.slice(1,3)); // Removes first and last animal. Slice removes parrot due to being asked not to include index 0, and removed elephant due to stopping before index 3
+console.log(animals.slice(1, 3)); // Removes first and last animal. Slice removes parrot due to being asked not to include index 0, and removed elephant due to stopping before index 3
 /******************************************************************************
 5.
 
@@ -196,9 +195,16 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 // Skriv koden for oppgave 6 her
-console.log(items.slice(1, 6));
-console.log(items.splice(3, 3, "Linjal"));
-console.log(items.splice(1, 2, "Markeringpenn"));
+// console.log(items.slice(1, 6));
+items.shift();
+console.log(items);
+items.splice(2, 1, "Linjal");
+console.log(items);
+items.splice(0, 2, "Markeringpenn");
+console.log(items);
+// items.join(" | ");
+console.log(items.join(" | "));
+console.log(items);
 /******************************************************************************
 7.
 
